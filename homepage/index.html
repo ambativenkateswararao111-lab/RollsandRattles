@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolls &amp; Rattles Kids Mart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-bike" viewBox="0 0 24 24">
+      <circle cx="5.5" cy="17.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18.5" cy="17.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 17.5V14l-3-3 4-3 2 3h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-baby" viewBox="0 0 24 24">
+      <circle cx="7" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="16" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M7 17h9l2-6a4 4 0 0 0-4-3H9a4 4 0 0 0-4 4M18 8l2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24">
+      <path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="2" y="13" width="20" height="5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="7" cy="18.3" r="1.7" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="17" cy="18.3" r="1.7" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-toy" viewBox="0 0 24 24">
+      <rect x="3" y="10.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="14" y="10.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="8.5" y="3.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+      <path d="M8 4h8v4a4 4 0 0 1-8 0V4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M8 5H5a2 2 0 0 0 0 4h1M16 5h3a2 2 0 0 1 0 4h-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M12 12v3M9 20h6M9.5 17h5l.5 3H9l.5-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22V5.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v17h5.5a2.5 2.5 0 0 1 2.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-shirt" viewBox="0 0 24 24">
+      <path d="M8 3l4 2 4-2 4 4-3 3v11H7V10L4 7l4-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-shoe" viewBox="0 0 24 24">
+      <path d="M3 18v-3.5c0-.8.5-1.5 1.3-1.8L10 10.5 14 6c.6-.6 1.6-.6 2.2 0L18 7.8c.7.7 1.8.9 2.7.5l.6-.3c.8-.4 1.7.4 1.4 1.2l-.7 2c-.3.9-1.1 1.5-2 1.5H8l-2 3H3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-store" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="16" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24">
+      <path d="M11 3h5a2 2 0 0 1 2 2v5a2 2 0 0 1-.6 1.4l-8 8a2 2 0 0 1-2.8 0l-4-4a2 2 0 0 1 0-2.8l8-8A2 2 0 0 1 11 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="15" cy="8" r="1.3" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-truck" viewBox="0 0 24 24">
+      <path d="M3 7h11v9H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="7" cy="18" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="17.5" cy="18" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1 6.1L12 16.8 6.8 19.7l1-6.1L3.4 9.4l6-.8L12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-family" viewBox="0 0 24 24">
+      <circle cx="8" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="16" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2M14 20v-1.5a3.5 3.5 0 0 1 3.5-3.5h1a3.5 3.5 0 0 1 3.5 3.5V20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 12H7L6 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="12" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24">
+      <path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="12" cy="14" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.7-3-1.3-5-4.3-5.1-4.5-.2-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.2 1 2.4.1.2.2.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.2.1.9-.1 1.6z" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+
+    <a href="#" class="logo">
+      <span class="logo-mark">
+        <span class="logo-r pink">R</span>
+        <svg class="logo-bear" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="10" r="6" fill="#FFD6E7"/>
+          <circle cx="28" cy="10" r="6" fill="#CFE6FF"/>
+          <circle cx="20" cy="22" r="13" fill="#FFE3A3"/>
+          <circle cx="14" cy="20" r="2" fill="#3A2E2E"/>
+          <circle cx="26" cy="20" r="2" fill="#3A2E2E"/>
+          <circle cx="20" cy="26" r="2.4" fill="#3A2E2E"/>
+        </svg>
+        <span class="logo-r blue">R</span>
+      </span>
+      <span class="logo-text">
+        <span class="brand-name"><span class="pink">Rolls</span> <span class="blue">&amp; Rattles</span></span>
+        <span class="brand-sub">Kids Mart</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+
+        <li class="nav-item dropdown" id="productsDropdown">
+          <button class="nav-link dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Products
+            <svg class="chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="mega-menu">
+            <ul class="mega-list">
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#DDF3F5,#B8C6E0);"><svg class="icon" width="18" height="18"><use href="#icon-bike"></use></svg></span>Bicycles</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#FFF1F5,#ECAACC);"><svg class="icon" width="18" height="18"><use href="#icon-baby"></use></svg></span>Newborn Essentials</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#DDF3F5,#09ADE9);"><svg class="icon" width="18" height="18"><use href="#icon-car"></use></svg></span>Ride-On Cars &amp; Bikes</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#FFF1F5,#B8C6E0);"><svg class="icon" width="18" height="18"><use href="#icon-toy"></use></svg></span>Toys</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#DDF3F5,#ECAACC);"><svg class="icon" width="18" height="18"><use href="#icon-trophy"></use></svg></span>Sports</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#FFF1F5,#09ADE9);"><svg class="icon" width="18" height="18"><use href="#icon-book"></use></svg></span>Stationery</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#DDF3F5,#ECAACC);"><svg class="icon" width="18" height="18"><use href="#icon-shirt"></use></svg></span>Clothing (0&ndash;6 Years)</a></li>
+              <li><a href="#"><span class="mega-thumb" style="background:linear-gradient(135deg,#FFF1F5,#B8C6E0);"><svg class="icon" width="18" height="18"><use href="#icon-shoe"></use></svg></span>Footwear (0&ndash;6 Years)</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="search-wrap" id="searchWrap">
+        <input type="text" class="search-box" id="searchInput" placeholder="Search products...">
+        <button class="icon-btn search-btn" id="searchBtn" aria-label="Search">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#1B2A4E" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="#1B2A4E" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <a href="tel:+918886128686" class="call-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" fill="#09ADE9"/></svg>
+        <span>+91 88861 28686</span>
+      </a>
+
+      <a href="#" class="whatsapp-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.7-3-1.3-5-4.3-5.1-4.5-.2-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.2 1 2.4.1.2.2.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.2.1.9-.1 1.6z" fill="#fff"/></svg>
+        <span>WhatsApp Us</span>
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head">
+    <span class="brand-name"><span class="pink">Rolls</span> <span class="blue">&amp; Rattles</span></span>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="#1B2A4E" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="#" class="mobile-link active">Home</a>
+    <a href="#" class="mobile-link">About</a>
+
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-toggle" type="button">
+        Products
+        <svg class="chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="#1B2A4E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mobile-accordion-panel">
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-bike"></use></svg>Bicycles</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-baby"></use></svg>Newborn Essentials</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-car"></use></svg>Ride-On Cars &amp; Bikes</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-toy"></use></svg>Toys</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-trophy"></use></svg>Sports</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-book"></use></svg>Stationery</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-shirt"></use></svg>Clothing (0&ndash;6 Years)</a>
+        <a href="#" class="mobile-cat-link"><svg class="icon" width="18" height="18"><use href="#icon-shoe"></use></svg>Footwear (0&ndash;6 Years)</a>
+      </div>
+    </div>
+
+    <a href="#" class="mobile-link">Blog</a>
+    <a href="#" class="mobile-link">Contact</a>
+  </nav>
+
+  <div class="mobile-actions">
+    <a href="tel:+918886128686" class="call-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1L6.6 10.8z" fill="#09ADE9"/></svg>
+      <span>+91 88861 28686</span>
+    </a>
+    <a href="#" class="whatsapp-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.9 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.7-3-1.3-5-4.3-5.1-4.5-.2-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.2 1 2.4.1.2.2.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.2.1.9-.1 1.6z" fill="#fff"/></svg>
+      <span>WhatsApp Us</span>
+    </a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container hero-inner">
+
+    <div class="hero-content">
+      <h1 class="hero-heading">
+        <span class="navy">Everything</span>
+        <span class="navy">Your Child Needs,</span>
+        <span class="pink">Under One Roof</span>
+      </h1>
+      <p class="hero-sub">4 Massive Floors. 10,000+ Products.<br>Premium Brands. Discount on Every Product.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 12H7L6 8z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Explore Products
+        </a>
+        <a href="#" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" stroke="#FF4D94" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="#FF4D94" stroke-width="1.8"/></svg>
+          Visit Showroom
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assests\Rolls_and_Rattles_Hero_Image.webp" alt="Happy family shopping at Rolls &amp; Rattles Kids Mart">
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="stats-bar">
+
+      <div class="stat">
+        <span class="stat-icon icon-blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="1.5" stroke="#2F6FED" stroke-width="1.8"/><path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2" stroke="#2F6FED" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <span class="stat-text"><strong>4</strong><p>Massive Floors</p></span>
+      </div>
+
+      <span class="stat-divider"></span>
+
+      <div class="stat">
+        <span class="stat-icon icon-pink">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 12H7L6 8z" stroke="#FF4D94" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="#FF4D94" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <span class="stat-text"><strong>10,000+</strong><p>Products</p></span>
+      </div>
+
+      <span class="stat-divider"></span>
+
+      <div class="stat">
+        <span class="stat-icon icon-purple">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1 6.1L12 16.8 6.8 19.7l1-6.1L3.4 9.4l6-.8L12 3z" stroke="#8B5CF6" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="stat-text"><strong>500+</strong><p>Premium Brands</p></span>
+      </div>
+
+      <span class="stat-divider"></span>
+
+      <div class="stat">
+        <span class="stat-icon icon-gold">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M11 3h5a2 2 0 0 1 2 2v5a2 2 0 0 1-.6 1.4l-8 8a2 2 0 0 1-2.8 0l-4-4a2 2 0 0 1 0-2.8l8-8A2 2 0 0 1 11 3z" stroke="#E8A317" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15" cy="8" r="1.3" fill="#E8A317"/></svg>
+        </span>
+        <span class="stat-text"><strong>Discount</strong><p>On Every Product</p></span>
+      </div>
+
+      
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHOP BY CATEGORY ================= -->
+<section class="section categories" id="categories">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Shop by Category</span>
+      <h2 class="section-title">Explore Our <span class="pink">Product Categories</span></h2>
+      <p class="section-sub">Everything your child needs&mdash;from newborn care to bicycles&mdash;all under one roof.</p>
+    </div>
+
+    <div class="category-grid">
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-blue"><svg class="icon" width="26" height="26"><use href="#icon-bike"></use></svg></span>
+        <h3>Bicycles</h3>
+        <p>Largest collection of geared, non-geared, and electric bicycles from trusted brands.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-pink"><svg class="icon" width="26" height="26"><use href="#icon-baby"></use></svg></span>
+        <h3>Newborn Essentials</h3>
+        <p>Everything for newborns including feeding accessories, walkers, prams, strollers, baby care, and daily essentials.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-purple"><svg class="icon" width="26" height="26"><use href="#icon-car"></use></svg></span>
+        <h3>Ride-On Cars &amp; Bikes</h3>
+        <p>Battery-operated cars, bikes, ride-ons, and fun mobility toys for kids.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-gold"><svg class="icon" width="26" height="26"><use href="#icon-toy"></use></svg></span>
+        <h3>Toys</h3>
+        <p>Educational toys, soft toys, puzzles, board games, learning toys, and more.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-green"><svg class="icon" width="26" height="26"><use href="#icon-trophy"></use></svg></span>
+        <h3>Sports</h3>
+        <p>Cricket, football, badminton, skating, swimming, and outdoor play equipment.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-blue"><svg class="icon" width="26" height="26"><use href="#icon-book"></use></svg></span>
+        <h3>Stationery</h3>
+        <p>School essentials, coloring kits, art supplies, educational materials, and craft products.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-pink"><svg class="icon" width="26" height="26"><use href="#icon-shirt"></use></svg></span>
+        <h3>Clothing (0&ndash;6 Years)</h3>
+        <p>Casual wear, party wear, themed dresses, and seasonal clothing for kids.</p>
+      </a>
+      <a href="#" class="category-card reveal">
+        <span class="category-icon icon-purple"><svg class="icon" width="26" height="26"><use href="#icon-shoe"></use></svg></span>
+        <h3>Footwear (0&ndash;6 Years)</h3>
+        <p>Comfortable and stylish footwear for babies and young children.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPLORE OUR 4 FLOORS ================= -->
+<section class="section floors" id="floors">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Explore Our 4 Floors</span>
+      <h2 class="section-title">Discover <span class="pink">Every Floor</span></h2>
+      <p class="section-sub">Each floor is thoughtfully organized to help you find exactly what your child needs.</p>
+    </div>
+
+    <div class="floor-tabs reveal" id="floorTabs">
+      <button class="floor-tab active" type="button" data-floor="ground"><span class="floor-tab-badge">G</span>Ground Floor</button>
+      <button class="floor-tab" type="button" data-floor="first"><span class="floor-tab-badge">1</span>First Floor</button>
+      <button class="floor-tab" type="button" data-floor="second"><span class="floor-tab-badge">2</span>Second Floor</button>
+      <button class="floor-tab" type="button" data-floor="third"><span class="floor-tab-badge">3</span>Third Floor</button>
+    </div>
+
+    <div class="floor-panels reveal">
+
+      <div class="floor-panel active" data-floor="ground">
+        <div class="floor-panel-head">
+          <span class="floor-panel-icon icon-blue"><svg class="icon" width="26" height="26"><use href="#icon-bike"></use></svg></span>
+          <div>
+            <span class="floor-panel-eyebrow">Ground Floor</span>
+            <h3>Bicycle World</h3>
+          </div>
+        </div>
+        <div class="floor-groups">
+          <div class="floor-group">
+            <h4>Categories</h4>
+            <ul class="floor-list">
+              <li>Non-Geared Cycles</li>
+              <li>Geared Cycles</li>
+              <li>Electric Cycles</li>
+              <li>Kids Cycles</li>
+              <li>Teen Cycles</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Brands</h4>
+            <div class="brand-chips">
+              <span class="brand-chip">Hero</span>
+              <span class="brand-chip">Kross</span>
+              <span class="brand-chip">BSA</span>
+              <span class="brand-chip">Allwyn</span>
+              <span class="brand-chip">OyeKid</span>
+              <span class="brand-chip">Owpee</span>
+              <span class="brand-chip">R for Rabbit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floor-panel" data-floor="first">
+        <div class="floor-panel-head">
+          <span class="floor-panel-icon icon-pink"><svg class="icon" width="26" height="26"><use href="#icon-baby"></use></svg></span>
+          <div>
+            <span class="floor-panel-eyebrow">First Floor</span>
+            <h3>Kids Mobility &amp; Sports</h3>
+          </div>
+        </div>
+        <div class="floor-groups floor-groups--3">
+          <div class="floor-group">
+            <h4>Mobility</h4>
+            <ul class="floor-list">
+              <li>Walkers</li>
+              <li>Prams</li>
+              <li>Strollers</li>
+              <li>Baby Chairs</li>
+              <li>Tricycles</li>
+              <li>Cradles</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Ride-On Collection</h4>
+            <ul class="floor-list">
+              <li>Battery Cars</li>
+              <li>Battery Bikes</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Sports</h4>
+            <ul class="floor-list">
+              <li>Cricket</li>
+              <li>Football</li>
+              <li>Badminton</li>
+              <li>Swimming</li>
+              <li>Skating</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="floor-panel" data-floor="second">
+        <div class="floor-panel-head">
+          <span class="floor-panel-icon icon-purple"><svg class="icon" width="26" height="26"><use href="#icon-toy"></use></svg></span>
+          <div>
+            <span class="floor-panel-eyebrow">Second Floor</span>
+            <h3>Baby &amp; Toy World</h3>
+          </div>
+        </div>
+        <div class="floor-groups floor-groups--3">
+          <div class="floor-group">
+            <h4>Newborn Essentials</h4>
+            <ul class="floor-list">
+              <li>Baby Care</li>
+              <li>Feeding</li>
+              <li>Bath</li>
+              <li>Hygiene</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Toys</h4>
+            <ul class="floor-list">
+              <li>Soft Toys</li>
+              <li>Educational Toys</li>
+              <li>Board Games</li>
+              <li>Learning Toys</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Other</h4>
+            <ul class="floor-list">
+              <li>Birthday Decorations</li>
+              <li>Stationery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="floor-panel" data-floor="third">
+        <div class="floor-panel-head">
+          <span class="floor-panel-icon icon-gold"><svg class="icon" width="26" height="26"><use href="#icon-shirt"></use></svg></span>
+          <div>
+            <span class="floor-panel-eyebrow">Third Floor</span>
+            <h3>Fashion Corner</h3>
+          </div>
+        </div>
+        <div class="floor-groups floor-groups--3">
+          <div class="floor-group">
+            <h4>Clothing</h4>
+            <ul class="floor-list">
+              <li>Daily Wear</li>
+              <li>Party Wear</li>
+              <li>Theme Dresses</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Footwear</h4>
+            <ul class="floor-list">
+              <li>Shoes</li>
+              <li>Sandals</li>
+              <li>Baby Footwear</li>
+            </ul>
+          </div>
+          <div class="floor-group">
+            <h4>Age Group</h4>
+            <ul class="floor-list">
+              <li>0&ndash;6 Years</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE R&R ================= -->
+<section class="section why" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Choose R&amp;R</span>
+      <h2 class="section-title">Why Families Choose <span class="pink">Rolls &amp; Rattles</span></h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon icon-blue"><svg class="icon" width="24" height="24"><use href="#icon-store"></use></svg></span>
+        <h3>4 Massive Floors</h3>
+        <p>One of the largest kids shopping destinations in Vijayawada.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-pink"><svg class="icon" width="24" height="24"><use href="#icon-bike"></use></svg></span>
+        <h3>Huge Bicycle Collection</h3>
+        <p>Geared, non-geared, and electric bicycles from trusted brands.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-purple"><svg class="icon" width="24" height="24"><use href="#icon-baby"></use></svg></span>
+        <h3>Complete Newborn Solutions</h3>
+        <p>Everything parents need from birth onwards.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-gold"><svg class="icon" width="24" height="24"><use href="#icon-bag"></use></svg></span>
+        <h3>One Stop Kids Store</h3>
+        <p>Toys, sports, clothing, footwear, and baby essentials under one roof.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-green"><svg class="icon" width="24" height="24"><use href="#icon-tag"></use></svg></span>
+        <h3>Discount Pricing</h3>
+        <p>Enjoy attractive discounts across all categories.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-blue"><svg class="icon" width="24" height="24"><use href="#icon-truck"></use></svg></span>
+        <h3>Convenient Shopping</h3>
+        <p>In-store shopping, pickup, and home delivery available.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-pink"><svg class="icon" width="24" height="24"><use href="#icon-star"></use></svg></span>
+        <h3>Trusted Brands</h3>
+        <p>Only quality products from well-known manufacturers.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon icon-purple"><svg class="icon" width="24" height="24"><use href="#icon-family"></use></svg></span>
+        <h3>Family Friendly Experience</h3>
+        <p>Spacious showroom with dedicated sections for easy shopping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED BRANDS ================= -->
+<section class="section brands" id="brands">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Featured Brands</span>
+      <h2 class="section-title">Trusted Brands <span class="pink">We Offer</span></h2>
+    </div>
+
+    <p class="brand-group-title reveal">Bicycle Brands</p>
+  </div>
+
+  <div class="brand-marquee reveal">
+    <div class="brand-track">
+      <span class="brand-pill">Hero</span>
+      <span class="brand-pill">Kross</span>
+      <span class="brand-pill">BSA</span>
+      <span class="brand-pill">Allwyn</span>
+      <span class="brand-pill">OyeKid</span>
+      <span class="brand-pill">Owpee</span>
+      <span class="brand-pill">R for Rabbit</span>
+      <span class="brand-pill" aria-hidden="true">Hero</span>
+      <span class="brand-pill" aria-hidden="true">Kross</span>
+      <span class="brand-pill" aria-hidden="true">BSA</span>
+      <span class="brand-pill" aria-hidden="true">Allwyn</span>
+      <span class="brand-pill" aria-hidden="true">OyeKid</span>
+      <span class="brand-pill" aria-hidden="true">Owpee</span>
+      <span class="brand-pill" aria-hidden="true">R for Rabbit</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="brand-note reveal">More brands across baby care, toys, clothing, and sports coming soon.</p>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Gallery</span>
+      <h2 class="section-title">A Glimpse <span class="pink">Inside Our Store</span></h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-tile reveal">
+        <img src="https://rollsandrattles.in/wp-content/uploads/2026/07/Rolls-And-Rattles-shop-in-Vijayawada-Poranki.webp" alt="Rolls &amp; Rattles Kids Mart showroom exterior in Poranki, Vijayawada" loading="lazy">
+        <span class="gallery-label">Showroom Exterior</span>
+      </div>
+      <div class="gallery-tile reveal">
+        <img src="https://rollsandrattles.in/wp-content/uploads/2026/07/Cycles-store-in-vijayawada.webp" alt="Bicycle section at Rolls &amp; Rattles Kids Mart, Vijayawada" loading="lazy">
+        <span class="gallery-label">Bicycle Section</span>
+      </div>
+      <div class="gallery-tile reveal">
+        <img src="https://rollsandrattles.in/wp-content/uploads/2026/07/Cycles-shop-in-poranki-vijayawada.webp" alt="Cycle showroom at Rolls &amp; Rattles Kids Mart, Poranki" loading="lazy">
+        <span class="gallery-label">Cycle Showroom</span>
+      </div>
+      <div class="gallery-tile reveal">
+        <img src="https://rollsandrattles.in/wp-content/uploads/2026/07/Car-Toys-in-Rolls-and-Rattles.webp" alt="Ride-on cars and toy cars at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <span class="gallery-label">Ride-On Cars</span>
+      </div>
+      <div class="gallery-tile reveal">
+        <img src="https://rollsandrattles.in/wp-content/uploads/2026/07/Toys-in-Rolls-and-Rattles.webp" alt="Toy collection at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <span class="gallery-label">Toy World</span>
+      </div>
+      <div class="gallery-tile reveal">
+        <img src="https://rollsandrattles.in/wp-content/uploads/2026/07/Kids-gift-store.webp" alt="Kids gift store section at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <span class="gallery-label">Kids Gift Store</span>
+      </div>
+      <div class="gallery-tile gallery-placeholder reveal" style="--g1:#DDF3F5;--g2:#B8C6E0;">
+        <svg class="icon gallery-icon" width="30" height="30"><use href="#icon-camera"></use></svg>
+        <span class="gallery-label gallery-label--static">Photo Coming Soon</span>
+      </div>
+      <div class="gallery-tile gallery-placeholder reveal" style="--g1:#FFF1F5;--g2:#ECAACC;">
+        <svg class="icon gallery-icon" width="30" height="30"><use href="#icon-camera"></use></svg>
+        <span class="gallery-label gallery-label--static">Photo Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CUSTOMER REVIEWS ================= -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Customer Reviews</span>
+      <h2 class="section-title">What Parents <span class="pink">Say About Us</span></h2>
+      <div class="rating-badge">
+        <span class="rating-stars">★★★★★</span>
+        <span>Google Rating</span>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <span class="review-stars">★★★★★</span>
+        <p class="review-text">Your customers' Google review will appear here &mdash; connect your Google Business listing or paste a testimonial.</p>
+        <div class="review-author">
+          <span class="review-avatar icon-blue"><svg class="icon" width="18" height="18"><use href="#icon-user"></use></svg></span>
+          <div><strong>Store Visit</strong><span>Add customer name</span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <span class="review-stars">★★★★★</span>
+        <p class="review-text">Your customers' Google review will appear here &mdash; connect your Google Business listing or paste a testimonial.</p>
+        <div class="review-author">
+          <span class="review-avatar icon-pink"><svg class="icon" width="18" height="18"><use href="#icon-user"></use></svg></span>
+          <div><strong>Store Visit</strong><span>Add customer name</span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <span class="review-stars">★★★★★</span>
+        <p class="review-text">Your customers' Google review will appear here &mdash; connect your Google Business listing or paste a testimonial.</p>
+        <div class="review-author">
+          <span class="review-avatar icon-purple"><svg class="icon" width="18" height="18"><use href="#icon-user"></use></svg></span>
+          <div><strong>Store Visit</strong><span>Add customer name</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#" class="btn btn-secondary">Read More Reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT OUR SHOWROOM ================= -->
+<section class="section visit" id="visit">
+  <div class="container visit-inner">
+
+    <div class="visit-info reveal">
+      <span class="eyebrow">Visit Our Showroom</span>
+      <h2 class="section-title left">Visit Rolls &amp; Rattles <span class="pink">Today</span></h2>
+
+      <div class="visit-detail">
+        <span class="visit-icon"><svg class="icon" width="19" height="19"><use href="#icon-pin"></use></svg></span>
+        <div>
+          <strong>Address</strong>
+          <p>Dr. No. 6, PVRDL Edifice, 7-475/1, Opposite IDBI Bank, Tulasamma Nagar, Poranki, Andhra Pradesh &ndash; 521137</p>
+        </div>
+      </div>
+
+      <div class="visit-detail">
+        <span class="visit-icon"><svg class="icon" width="19" height="19"><use href="#icon-clock"></use></svg></span>
+        <div>
+          <strong>Business Hours</strong>
+          <p>Every Day &middot; 10:30 AM &ndash; 9:30 PM</p>
+        </div>
+      </div>
+
+      <div class="visit-detail">
+        <span class="visit-icon"><svg class="icon" width="19" height="19"><use href="#icon-phone"></use></svg></span>
+        <div>
+          <strong>Contact</strong>
+          <p>+91 88861 28686</p>
+        </div>
+      </div>
+
+      <div class="visit-buttons">
+        <a href="https://maps.app.goo.gl/Bdpxa887ZbUXaaTX6" target="_blank" rel="noopener" class="btn btn-primary"><svg class="icon" width="18" height="18"><use href="#icon-pin"></use></svg>Get Directions</a>
+        <a href="tel:+918886128686" class="btn btn-secondary"><svg class="icon" width="18" height="18"><use href="#icon-phone"></use></svg>Call Now</a>
+        <a href="#" class="whatsapp-btn"><svg class="icon" width="18" height="18"><use href="#icon-whatsapp"></use></svg><span>WhatsApp</span></a>
+      </div>
+    </div>
+
+    <div class="visit-visual reveal">
+      <div class="visit-map">
+        <iframe
+          src="https://www.google.com/maps?q=Rolls+%26+Rattles+Kids+Mart,+Poranki,+Vijayawada&amp;ll=16.4753873,80.709713&amp;z=16&amp;output=embed"
+          title="Rolls &amp; Rattles Kids Mart location on Google Maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-name"><span class="pink">Rolls</span> <span class="blue">&amp; Rattles</span></span>
+      <span class="brand-sub">Kids Mart</span>
+      <p>Everything your child needs, under one roof.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <a href="tel:+918886128686"><svg class="icon" width="16" height="16"><use href="#icon-phone"></use></svg>+91 88861 28686</a>
+      <a href="#"><svg class="icon" width="16" height="16"><use href="#icon-whatsapp"></use></svg>WhatsApp Us</a>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 Rolls &amp; Rattles Kids Mart. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
