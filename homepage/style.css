@@ -1062,49 +1062,6 @@ a { text-decoration: none; color: inherit; }
 .cat-green .category-tile-bgicon,
 .cat-green .category-tile-icon { color: #22B573; }
 
-.category-tile.cat-feature {
-  min-height: 380px;
-  padding: 30px;
-}
-
-.category-tile.cat-feature .category-tile-content {
-  max-width: 44%;
-}
-
-.category-tile.cat-feature .category-tile-body h3 {
-  font-size: 26px;
-}
-
-.category-tile.cat-feature .category-tile-body p {
-  font-size: 14.5px;
-}
-
-.category-tile.cat-feature .category-tile-cta {
-  font-size: 13.5px;
-  padding: 12px 20px;
-}
-
-.category-tile.cat-feature .category-tile-photo {
-  width: 72%;
-  max-width: 380px;
-  max-height: 96%;
-  right: 0;
-  bottom: 0;
-}
-
-.category-tile.cat-wide {
-  min-height: 220px;
-}
-
-.category-tile.cat-wide .category-tile-content {
-  max-width: 42%;
-}
-
-.category-tile.cat-wide .category-tile-photo {
-  width: 50%;
-  max-width: 260px;
-}
-
 /* =====================================================
    Explore Our 4 Floors
    ===================================================== */
@@ -1713,11 +1670,6 @@ a { text-decoration: none; color: inherit; }
     gap: 18px;
   }
 
-  .category-tile.cat-feature,
-  .category-tile.cat-wide {
-    grid-column: span 2;
-  }
-
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
@@ -1805,10 +1757,34 @@ a { text-decoration: none; color: inherit; }
   .category-tile.cat-feature {
     grid-column: span 2;
     grid-row: span 2;
+    min-height: 420px;
+    padding: 30px;
+  }
+
+  .category-tile.cat-feature .category-tile-content {
+    max-width: 38%;
+  }
+
+  .category-tile.cat-feature .category-tile-body h3 {
+    font-size: 26px;
+  }
+
+  .category-tile.cat-feature .category-tile-body p {
+    font-size: 14.5px;
+  }
+
+  .category-tile.cat-feature .category-tile-cta {
+    font-size: 13.5px;
+    padding: 12px 20px;
   }
 
   .category-tile.cat-wide {
     grid-column: span 2;
+    min-height: 220px;
+  }
+
+  .category-tile.cat-wide .category-tile-content {
+    max-width: 42%;
   }
 
   .category-tile-bgicon {
@@ -1827,11 +1803,16 @@ a { text-decoration: none; color: inherit; }
   }
 
   .category-tile.cat-feature .category-tile-photo {
-    max-width: 460px;
-    max-height: 98%;
+    width: 84%;
+    max-width: 580px;
+    max-height: 100%;
+    right: 0;
+    bottom: 0;
+    margin-left: 20px;
   }
 
   .category-tile.cat-wide .category-tile-photo {
+    width: 50%;
     max-width: 300px;
   }
 
