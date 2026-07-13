@@ -1,0 +1,164 @@
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-store" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="16" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22V5.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v17h5.5a2.5 2.5 0 0 1 2.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-family" viewBox="0 0 24 24">
+      <circle cx="8" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="16" cy="7" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2M14 20v-1.5a3.5 3.5 0 0 1 3.5-3.5h1a3.5 3.5 0 0 1 3.5 3.5V20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 12H7L6 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24">
+      <path d="M11 3h5a2 2 0 0 1 2 2v5a2 2 0 0 1-.6 1.4l-8 8a2 2 0 0 1-2.8 0l-4-4a2 2 0 0 1 0-2.8l8-8A2 2 0 0 1 11 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="15" cy="8" r="1.3" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24">
+      <path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="12" cy="14" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<style>
+#simple { padding: 56px 0; background: linear-gradient(180deg, #ffffff, #DDF3F5 120%); }
+#simple .container { max-width: 1320px; margin: 0 auto; padding: 0 18px; box-sizing: border-box; }
+#simple .section-head { max-width: 640px; margin: 0 auto 32px; text-align: center; }
+#simple .eyebrow { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: #09ADE9; background: #DDF3F5; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px; }
+#simple .section-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.25; color: #1B2A4E; margin: 0; }
+#simple .section-title .pink { color: #FF4D94; }
+#simple .section-sub { margin-top: 12px; font-size: 14.5px; line-height: 1.6; color: #6B7280; font-family: 'Poppins', sans-serif; }
+#simple .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1); }
+#simple .reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { #simple .reveal { opacity: 1; transform: none; transition: none; } }
+#simple .icon { flex-shrink: 0; vertical-align: middle; }
+#simple .icon-blue { background: #DCEBFF; color: #2F6FED; }
+#simple .icon-pink { background: #FDE0EC; color: #FF4D94; }
+#simple .icon-purple { background: #EDE3FB; color: #8B5CF6; }
+#simple .icon-gold { background: #FDF0D3; color: #E8A317; }
+#simple .icon-green { background: #DFF5E6; color: #22B573; }
+
+#simple .simple-path { position: relative; max-width: 640px; margin: 0 auto; padding-left: 40px; }
+#simple .simple-path::before { content: ''; position: absolute; left: 17px; top: 6px; bottom: 6px; width: 2px; background: #B8C6E0; }
+#simple .simple-step { position: relative; padding-bottom: 30px; display: flex; gap: 16px; align-items: flex-start; }
+#simple .simple-step:last-child { padding-bottom: 0; }
+#simple .simple-num {
+  position: absolute; left: -40px; top: 0; width: 36px; height: 36px; border-radius: 50%;
+  background: #1B2A4E; color: #fff; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 13px;
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px rgba(27, 42, 78, 0.2);
+}
+#simple .simple-step.reveal.in-view .simple-num { background: #09ADE9; }
+#simple .simple-body {
+  background: #ffffff; border-radius: 18px; padding: 16px 18px; box-shadow: 0 12px 30px rgba(27, 42, 78, 0.06);
+  flex: 1; display: flex; align-items: center; gap: 14px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#simple .simple-body:hover { transform: translateX(4px); box-shadow: 0 16px 36px rgba(9, 173, 233, 0.14); }
+#simple .simple-icon { width: 42px; height: 42px; min-width: 42px; border-radius: 13px; display: flex; align-items: center; justify-content: center; }
+#simple .simple-body h3 { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 14.5px; color: #1B2A4E; margin: 0 0 3px; }
+#simple .simple-body p { font-size: 12.5px; line-height: 1.5; color: #6B7280; margin: 0; font-family: 'Poppins', sans-serif; }
+
+@media (min-width: 768px) { #simple .section-title { font-size: 32px; } #simple .section-sub { font-size: 15.5px; } }
+@media (min-width: 960px) {
+  #simple { padding: 96px 0; }
+  #simple .container { padding: 0 40px; }
+  #simple .section-head { margin-bottom: 44px; }
+  #simple .section-title { font-size: 38px; }
+  #simple .simple-path { max-width: 760px; }
+}
+</style>
+
+<section class="section simple" id="simple">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">How A Visit Feels</span>
+      <h2 class="section-title">Shopping Made <span class="pink">Simple</span></h2>
+      <p class="section-sub">No confusion, no crowded aisles&mdash;just a smooth path from walking in to walking out happy.</p>
+    </div>
+
+    <div class="simple-path">
+
+      <div class="simple-step reveal">
+        <span class="simple-num">01</span>
+        <div class="simple-body">
+          <span class="simple-icon icon-blue"><svg class="icon" width="22" height="22"><use href="#icon-store" xlink:href="#icon-store"></use></svg></span>
+          <div><h3>Visit Store</h3><p>Walk into 4 massive floors built just for your child.</p></div>
+        </div>
+      </div>
+
+      <div class="simple-step reveal">
+        <span class="simple-num">02</span>
+        <div class="simple-body">
+          <span class="simple-icon icon-pink"><svg class="icon" width="22" height="22"><use href="#icon-book" xlink:href="#icon-book"></use></svg></span>
+          <div><h3>Explore Categories</h3><p>Wander through cycles, baby care, toys, sports, and fashion zones.</p></div>
+        </div>
+      </div>
+
+      <div class="simple-step reveal">
+        <span class="simple-num">03</span>
+        <div class="simple-body">
+          <span class="simple-icon icon-purple"><svg class="icon" width="22" height="22"><use href="#icon-family" xlink:href="#icon-family"></use></svg></span>
+          <div><h3>Get Expert Guidance</h3><p>Our team helps you find exactly what fits your child's age and needs.</p></div>
+        </div>
+      </div>
+
+      <div class="simple-step reveal">
+        <span class="simple-num">04</span>
+        <div class="simple-body">
+          <span class="simple-icon icon-gold"><svg class="icon" width="22" height="22"><use href="#icon-bag" xlink:href="#icon-bag"></use></svg></span>
+          <div><h3>Choose Products</h3><p>Compare trusted brands and pick what feels right for your family.</p></div>
+        </div>
+      </div>
+
+      <div class="simple-step reveal">
+        <span class="simple-num">05</span>
+        <div class="simple-body">
+          <span class="simple-icon icon-green"><svg class="icon" width="22" height="22"><use href="#icon-tag" xlink:href="#icon-tag"></use></svg></span>
+          <div><h3>Enjoy Discount Pricing</h3><p>Walk out with better prices on every single product, every time.</p></div>
+        </div>
+      </div>
+
+      <div class="simple-step reveal">
+        <span class="simple-num">06</span>
+        <div class="simple-body">
+          <span class="simple-icon icon-pink"><svg class="icon" width="22" height="22"><use href="#icon-camera" xlink:href="#icon-camera"></use></svg></span>
+          <div><h3>Take Home Happy Memories</h3><p>Because shopping for your kids should feel like a celebration.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var thisScript = document.currentScript;
+  var section = thisScript.previousElementSibling;
+  var revealEls = section.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var groups = new Map();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var parent = el.parentElement;
+        var siblingIndex = groups.get(parent) || 0;
+        el.style.transitionDelay = Math.min(siblingIndex, 6) * 70 + 'ms';
+        groups.set(parent, siblingIndex + 1);
+        el.classList.add('in-view');
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>

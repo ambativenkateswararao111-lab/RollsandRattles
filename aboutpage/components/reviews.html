@@ -1,0 +1,120 @@
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<style>
+#reviews { padding: 56px 0; background: #ffffff; }
+#reviews .container { max-width: 1320px; margin: 0 auto; padding: 0 18px; box-sizing: border-box; }
+#reviews .section-head { max-width: 640px; margin: 0 auto 32px; text-align: center; }
+#reviews .eyebrow { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: #09ADE9; background: #DDF3F5; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px; }
+#reviews .section-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.25; color: #1B2A4E; margin: 0; }
+#reviews .section-title .pink { color: #FF4D94; }
+#reviews .section-cta { text-align: center; margin-top: 30px; }
+#reviews .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 24px; border-radius: 999px; font-weight: 600; font-size: 15px; white-space: nowrap; font-family: 'Poppins', sans-serif; text-decoration: none; }
+#reviews .btn-secondary { background: #fff; color: #1B2A4E; box-shadow: 0 6px 20px rgba(27, 42, 78, 0.1); }
+#reviews .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1); }
+#reviews .reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { #reviews .reveal { opacity: 1; transform: none; transition: none; } }
+#reviews .icon { flex-shrink: 0; vertical-align: middle; }
+#reviews .icon-blue { background: #DCEBFF; color: #2F6FED; }
+#reviews .icon-pink { background: #FDE0EC; color: #FF4D94; }
+#reviews .icon-purple { background: #EDE3FB; color: #8B5CF6; }
+
+#reviews .rating-badge { display: inline-flex; align-items: center; gap: 8px; background: #DDF3F5; padding: 8px 18px; border-radius: 999px; margin-top: 16px; font-size: 12.5px; font-weight: 600; color: #1B2A4E; font-family: 'Poppins', sans-serif; }
+#reviews .rating-stars { color: #F5A623; letter-spacing: 2px; }
+
+#reviews .review-scroll { display: flex; gap: 16px; overflow-x: auto; padding: 8px 4px 18px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+#reviews .review-scroll::-webkit-scrollbar { height: 6px; }
+#reviews .review-scroll::-webkit-scrollbar-thumb { background: #DDF3F5; border-radius: 6px; }
+#reviews .review-card { scroll-snap-align: start; flex: 0 0 84%; display: flex; flex-direction: column; gap: 14px; background: #ffffff; border-radius: 20px; padding: 22px 20px; box-shadow: 0 14px 34px rgba(27, 42, 78, 0.07); }
+#reviews .review-stars { color: #F5A623; letter-spacing: 2px; font-size: 15px; }
+#reviews .review-tag { align-self: flex-start; font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px; color: #09ADE9; background: #DDF3F5; padding: 4px 10px; border-radius: 999px; }
+#reviews .review-text { font-size: 13px; line-height: 1.6; color: #6B7280; font-style: italic; margin: 0; font-family: 'Poppins', sans-serif; }
+#reviews .review-author { display: flex; align-items: center; gap: 10px; margin-top: auto; }
+#reviews .review-avatar { width: 38px; height: 38px; min-width: 38px; border-radius: 50%; background: #DDF3F5; display: flex; align-items: center; justify-content: center; }
+#reviews .review-author strong { display: block; font-size: 12.5px; color: #1B2A4E; }
+#reviews .review-author span { font-size: 11px; color: #6B7280; }
+
+@media (min-width: 480px) { #reviews .review-scroll { padding-bottom: 8px; } }
+@media (min-width: 640px) { #reviews .review-scroll { overflow: visible; scroll-snap-type: none; } #reviews .review-card { flex: 1 1 0; } }
+@media (min-width: 768px) { #reviews .section-title { font-size: 32px; } }
+@media (min-width: 960px) { #reviews { padding: 96px 0; } #reviews .container { padding: 0 40px; } #reviews .section-head { margin-bottom: 44px; } #reviews .section-title { font-size: 38px; } }
+</style>
+
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trusted By Families</span>
+      <h2 class="section-title">What Families <span class="pink">Say About Us</span></h2>
+      <div class="rating-badge">
+        <span class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>Google Rating</span>
+      </div>
+    </div>
+
+    <div class="review-scroll">
+      <div class="review-card reveal">
+        <span class="review-tag">Verified Google Review</span>
+        <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="review-text">Your customers' Google review will appear here &mdash; connect your Google Business listing or paste a testimonial.</p>
+        <div class="review-author">
+          <span class="review-avatar icon-blue"><svg class="icon" width="18" height="18"><use href="#icon-user" xlink:href="#icon-user"></use></svg></span>
+          <div><strong>Store Visit</strong><span>Add customer name</span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <span class="review-tag">Verified Google Review</span>
+        <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="review-text">Your customers' Google review will appear here &mdash; connect your Google Business listing or paste a testimonial.</p>
+        <div class="review-author">
+          <span class="review-avatar icon-pink"><svg class="icon" width="18" height="18"><use href="#icon-user" xlink:href="#icon-user"></use></svg></span>
+          <div><strong>Store Visit</strong><span>Add customer name</span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <span class="review-tag">Verified Google Review</span>
+        <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="review-text">Your customers' Google review will appear here &mdash; connect your Google Business listing or paste a testimonial.</p>
+        <div class="review-author">
+          <span class="review-avatar icon-purple"><svg class="icon" width="18" height="18"><use href="#icon-user" xlink:href="#icon-user"></use></svg></span>
+          <div><strong>Store Visit</strong><span>Add customer name</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a href="#" class="btn btn-secondary">Read More Reviews</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var thisScript = document.currentScript;
+  var section = thisScript.previousElementSibling;
+  var revealEls = section.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var groups = new Map();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var parent = el.parentElement;
+        var siblingIndex = groups.get(parent) || 0;
+        el.style.transitionDelay = Math.min(siblingIndex, 6) * 70 + 'ms';
+        groups.set(parent, siblingIndex + 1);
+        el.classList.add('in-view');
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>

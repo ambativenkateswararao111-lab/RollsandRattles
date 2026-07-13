@@ -1,0 +1,208 @@
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-bike" viewBox="0 0 24 24">
+      <circle cx="5.5" cy="17.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="18.5" cy="17.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM12 17.5V14l-3-3 4-3 2 3h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-baby" viewBox="0 0 24 24">
+      <circle cx="7" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="16" cy="19" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M7 17h9l2-6a4 4 0 0 0-4-3H9a4 4 0 0 0-4 4M18 8l2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-toy" viewBox="0 0 24 24">
+      <rect x="3" y="10.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="14" y="10.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="8.5" y="3.5" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-shirt" viewBox="0 0 24 24">
+      <path d="M8 3l4 2 4-2 4 4-3 3v11H7V10L4 7l4-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<style>
+#worlds { padding: 56px 0; background: #ffffff; }
+#worlds .container { max-width: 1320px; margin: 0 auto; padding: 0 18px; box-sizing: border-box; }
+#worlds .section-head { max-width: 640px; margin: 0 auto 32px; text-align: center; }
+#worlds .eyebrow { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: #09ADE9; background: #DDF3F5; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px; }
+#worlds .section-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.25; color: #1B2A4E; margin: 0; }
+#worlds .section-title .pink { color: #FF4D94; }
+#worlds .section-sub { margin-top: 12px; font-size: 14.5px; line-height: 1.6; color: #6B7280; font-family: 'Poppins', sans-serif; }
+#worlds .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1); }
+#worlds .reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { #worlds .reveal { opacity: 1; transform: none; transition: none; } }
+#worlds .icon { flex-shrink: 0; vertical-align: middle; }
+#worlds .icon-blue { background: #DCEBFF; color: #2F6FED; }
+#worlds .icon-pink { background: #FDE0EC; color: #FF4D94; }
+#worlds .icon-gold { background: #FDF0D3; color: #E8A317; }
+
+#worlds .worlds-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+#worlds .world-card {
+  position: relative; overflow: hidden; border-radius: 28px; min-height: 380px; isolation: isolate;
+  box-shadow: 0 20px 46px rgba(27, 42, 78, 0.14);
+  transition: transform 0.4s cubic-bezier(0.16, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+#worlds .world-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(27, 42, 78, 0.22); }
+#worlds .world-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; z-index: 0; }
+#worlds .world-card:hover .world-photo { transform: scale(1.07); }
+#worlds .world-scrim {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(27, 42, 78, 0.05) 0%, rgba(27, 42, 78, 0.15) 45%, rgba(15, 22, 43, 0.88) 100%);
+}
+#worlds .world-top { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 20px; }
+#worlds .world-badge { width: 52px; height: 52px; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 22px rgba(27, 42, 78, 0.18); }
+#worlds .world-index {
+  font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 1.5px; color: #fff;
+  background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 7px 14px; border-radius: 999px;
+}
+#worlds .world-glass {
+  position: relative; z-index: 2; margin: 0 14px 14px; padding: 18px 18px 20px; border-radius: 20px;
+  background: rgba(255, 255, 255, 0.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+#worlds .world-glass h3 { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 19px; color: #fff; margin: 0 0 4px; }
+#worlds .world-glass .world-tagline { font-size: 12.5px; color: rgba(255, 255, 255, 0.82); line-height: 1.5; margin: 0 0 12px; }
+#worlds .world-list { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 14px; padding: 0; }
+#worlds .world-list li { font-size: 11.5px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.24); padding: 6px 12px; border-radius: 999px; }
+#worlds .world-cta { display: inline-flex; align-items: center; gap: 6px; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 12.5px; color: #1B2A4E; background: #ffffff; padding: 10px 16px; border-radius: 999px; transition: gap 0.25s ease; }
+#worlds .world-card:hover .world-cta { gap: 10px; }
+
+@media (min-width: 640px) { #worlds .worlds-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { #worlds .section-title { font-size: 32px; } #worlds .section-sub { font-size: 15.5px; } }
+@media (min-width: 960px) {
+  #worlds { padding: 96px 0; }
+  #worlds .container { padding: 0 40px; }
+  #worlds .section-head { margin-bottom: 44px; }
+  #worlds .section-title { font-size: 38px; }
+  #worlds .worlds-grid { grid-template-columns: repeat(4, 1fr); }
+  #worlds .world-card { min-height: 460px; }
+}
+</style>
+
+<section class="section worlds" id="worlds">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Four Worlds, One Roof</span>
+      <h2 class="section-title">Discover Our <span class="pink">Four Worlds</span></h2>
+      <p class="section-sub">Each floor is a world of its own&mdash;step in and explore at your own pace.</p>
+    </div>
+
+    <div class="worlds-grid">
+
+      <div class="world-card reveal">
+        <img class="world-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Bicycle-Store.webp" alt="Cycle World at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <div class="world-scrim"></div>
+        <div class="world-top">
+          <span class="world-badge icon-blue"><svg class="icon" width="24" height="24"><use href="#icon-bike" xlink:href="#icon-bike"></use></svg></span>
+          <span class="world-index">World 01</span>
+        </div>
+        <div class="world-glass">
+          <h3>Cycle World</h3>
+          <p class="world-tagline">Where every ride begins&mdash;geared, non-geared, and electric.</p>
+          <ul class="world-list">
+            <li>Geared Cycles</li>
+            <li>Non-Geared Cycles</li>
+            <li>Electric Cycles</li>
+            <li>Premium Brands</li>
+          </ul>
+          <span class="world-cta">Explore World <svg class="icon" width="13" height="13"><use href="#icon-arrow" xlink:href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+
+      <div class="world-card reveal">
+        <img class="world-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Baby-Essentials-store.webp" alt="Baby World at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <div class="world-scrim"></div>
+        <div class="world-top">
+          <span class="world-badge icon-pink"><svg class="icon" width="24" height="24"><use href="#icon-baby" xlink:href="#icon-baby"></use></svg></span>
+          <span class="world-index">World 02</span>
+        </div>
+        <div class="world-glass">
+          <h3>Baby World</h3>
+          <p class="world-tagline">A gentle universe for your newborn, thoughtfully curated.</p>
+          <ul class="world-list">
+            <li>Newborn Essentials</li>
+            <li>Feeding</li>
+            <li>Walkers</li>
+            <li>Strollers</li>
+            <li>Prams</li>
+            <li>Cradles</li>
+          </ul>
+          <span class="world-cta">Explore World <svg class="icon" width="13" height="13"><use href="#icon-arrow" xlink:href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+
+      <div class="world-card reveal">
+        <img class="world-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Playful-toys-store-1.webp" alt="Play World at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <div class="world-scrim"></div>
+        <div class="world-top">
+          <span class="world-badge icon-purple" style="background:#EDE3FB;color:#8B5CF6;"><svg class="icon" width="24" height="24"><use href="#icon-toy" xlink:href="#icon-toy"></use></svg></span>
+          <span class="world-index">World 03</span>
+        </div>
+        <div class="world-glass">
+          <h3>Play World</h3>
+          <p class="world-tagline">Where imagination plays all day, every day.</p>
+          <ul class="world-list">
+            <li>Educational Toys</li>
+            <li>Soft Toys</li>
+            <li>Games</li>
+            <li>Birthday Supplies</li>
+            <li>Stationery</li>
+          </ul>
+          <span class="world-cta">Explore World <svg class="icon" width="13" height="13"><use href="#icon-arrow" xlink:href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+
+      <div class="world-card reveal">
+        <img class="world-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Kids-clothing-Store.webp" alt="Fashion World at Rolls &amp; Rattles Kids Mart" loading="lazy">
+        <div class="world-scrim"></div>
+        <div class="world-top">
+          <span class="world-badge icon-gold"><svg class="icon" width="24" height="24"><use href="#icon-shirt" xlink:href="#icon-shirt"></use></svg></span>
+          <span class="world-index">World 04</span>
+        </div>
+        <div class="world-glass">
+          <h3>Fashion World</h3>
+          <p class="world-tagline">Dress up every moment, from playdates to parties.</p>
+          <ul class="world-list">
+            <li>Clothing (0&ndash;6 Yrs)</li>
+            <li>Footwear</li>
+            <li>Party Wear</li>
+            <li>Everyday Wear</li>
+          </ul>
+          <span class="world-cta">Explore World <svg class="icon" width="13" height="13"><use href="#icon-arrow" xlink:href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var thisScript = document.currentScript;
+  var section = thisScript.previousElementSibling;
+  var revealEls = section.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var groups = new Map();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var parent = el.parentElement;
+        var siblingIndex = groups.get(parent) || 0;
+        el.style.transitionDelay = Math.min(siblingIndex, 6) * 70 + 'ms';
+        groups.set(parent, siblingIndex + 1);
+        el.classList.add('in-view');
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>

@@ -1,0 +1,187 @@
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l-1 12H7L6 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1 6.1L12 16.8 6.8 19.7l1-6.1L3.4 9.4l6-.8L12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<style>
+#day-story { padding: 56px 0; background: linear-gradient(180deg, #ffffff, #DDF3F5 120%); }
+#day-story .container { max-width: 1320px; margin: 0 auto; padding: 0 18px; box-sizing: border-box; }
+#day-story .section-head { max-width: 640px; margin: 0 auto 32px; text-align: center; }
+#day-story .eyebrow { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: #09ADE9; background: #DDF3F5; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px; }
+#day-story .section-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.25; color: #1B2A4E; margin: 0; }
+#day-story .section-title .pink { color: #FF4D94; }
+#day-story .section-sub { margin-top: 12px; font-size: 14.5px; line-height: 1.6; color: #6B7280; font-family: 'Poppins', sans-serif; }
+#day-story .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1); }
+#day-story .reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { #day-story .reveal { opacity: 1; transform: none; transition: none; } }
+#day-story .icon { flex-shrink: 0; vertical-align: middle; }
+
+#day-story .day-rail { position: relative; max-width: 780px; margin: 0 auto; padding-left: 4px; }
+#day-story .day-rail::before {
+  content: ''; position: absolute; left: 27px; top: 8px; bottom: 8px; width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, #09ADE9, #ECAACC);
+}
+#day-story .day-stop { position: relative; display: flex; gap: 18px; padding-bottom: 30px; }
+#day-story .day-stop:last-child { padding-bottom: 0; }
+#day-story .day-badge {
+  position: relative; z-index: 1; width: 56px; height: 56px; min-width: 56px; border-radius: 50%;
+  background: #ffffff; box-shadow: 0 0 0 5px #fff, 0 10px 24px rgba(27, 42, 78, 0.16);
+  display: flex; align-items: center; justify-content: center; font-family: 'Baloo 2', sans-serif;
+  font-weight: 800; font-size: 15px; color: #09ADE9;
+}
+#day-story .day-card {
+  flex: 1; display: flex; gap: 14px; align-items: center; background: #ffffff; border-radius: 20px; padding: 14px;
+  box-shadow: 0 14px 32px rgba(27, 42, 78, 0.07); transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#day-story .day-card:hover { transform: translateY(-4px); box-shadow: 0 20px 42px rgba(9, 173, 233, 0.15); }
+#day-story .day-photo { width: 84px; height: 84px; min-width: 84px; border-radius: 16px; object-fit: cover; }
+#day-story .day-eyebrow { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #09ADE9; margin-bottom: 4px; }
+#day-story .day-card h3 { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 15px; color: #1B2A4E; margin: 0 0 4px; }
+#day-story .day-card p { font-size: 12.5px; line-height: 1.5; color: #6B7280; margin: 0; font-family: 'Poppins', sans-serif; }
+#day-story .day-stop.day-finale .day-badge { background: #FF4D94; color: #fff; box-shadow: 0 0 0 5px #fff, 0 10px 26px rgba(255, 77, 148, 0.4); }
+#day-story .day-stop.day-finale .day-card { background: linear-gradient(135deg, #DDF3F5, #FFF1F5); box-shadow: 0 18px 40px rgba(255, 77, 148, 0.14); }
+
+@media (min-width: 768px) { #day-story .section-title { font-size: 32px; } #day-story .section-sub { font-size: 15.5px; } }
+@media (min-width: 960px) {
+  #day-story { padding: 96px 0; }
+  #day-story .container { padding: 0 40px; }
+  #day-story .section-head { margin-bottom: 44px; }
+  #day-story .section-title { font-size: 38px; }
+  #day-story .day-rail::before { left: 27px; }
+}
+</style>
+
+<section class="section day-story" id="day-story">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">One Visit, Countless Smiles</span>
+      <h2 class="section-title">A Day at <span class="pink">Rolls &amp; Rattles</span></h2>
+      <p class="section-sub">Here's what a typical family visit looks like, floor by floor.</p>
+    </div>
+
+    <div class="day-rail">
+
+      <div class="day-stop reveal">
+        <span class="day-badge"><svg class="icon" width="22" height="22"><use href="#icon-clock" xlink:href="#icon-clock"></use></svg></span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Rolls-And-Rattles-shop-in-Vijayawada-Poranki.webp" alt="Morning arrival at Rolls &amp; Rattles" loading="lazy">
+          <div>
+            <span class="day-eyebrow">10:30 AM</span>
+            <h3>Morning Arrival</h3>
+            <p>Doors open to a bright, welcoming showroom.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-stop reveal">
+        <span class="day-badge">G</span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Cycles-shop-in-poranki-vijayawada.webp" alt="Ground floor bicycle selection" loading="lazy">
+          <div>
+            <span class="day-eyebrow">Ground Floor</span>
+            <h3>Choose a Bicycle</h3>
+            <p>Test-ride from our biggest cycle collection in town.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-stop reveal">
+        <span class="day-badge">1</span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Car-Toys-in-Rolls-and-Rattles.webp" alt="Ride-on cars and bikes" loading="lazy">
+          <div>
+            <span class="day-eyebrow">First Floor</span>
+            <h3>Ride-On Adventures</h3>
+            <p>Battery cars, bikes, and mobility rides for the little ones.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-stop reveal">
+        <span class="day-badge">2</span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Toys-in-Rolls-and-Rattles.webp" alt="Baby and toy world" loading="lazy">
+          <div>
+            <span class="day-eyebrow">Second Floor</span>
+            <h3>Baby &amp; Toy World</h3>
+            <p>Newborn essentials meet a world of toys and games.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-stop reveal">
+        <span class="day-badge">3</span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Kids-clothing-Store.webp" alt="Fashion and footwear floor" loading="lazy">
+          <div>
+            <span class="day-eyebrow">Third Floor</span>
+            <h3>Fashion &amp; Footwear</h3>
+            <p>Complete the look with outfits and shoes for every occasion.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-stop reveal">
+        <span class="day-badge"><svg class="icon" width="22" height="22"><use href="#icon-bag" xlink:href="#icon-bag"></use></svg></span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Kids-gift-store.webp" alt="Checkout counter" loading="lazy">
+          <div>
+            <span class="day-eyebrow">Checkout</span>
+            <h3>Happy Checkout</h3>
+            <p>Discount pricing on everything you pick, every single time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-stop day-finale reveal">
+        <span class="day-badge"><svg class="icon" width="22" height="22"><use href="#icon-star" xlink:href="#icon-star"></use></svg></span>
+        <div class="day-card">
+          <img class="day-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Rolls-And-Rattles-shop-in-Vijayawada-Poranki.webp" alt="Family leaving happy" loading="lazy">
+          <div>
+            <span class="day-eyebrow">The Finale</span>
+            <h3>Smiles All Around</h3>
+            <p>Because a day at R&amp;R always ends in happy memories.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var thisScript = document.currentScript;
+  var section = thisScript.previousElementSibling;
+  var revealEls = section.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var groups = new Map();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var parent = el.parentElement;
+        var siblingIndex = groups.get(parent) || 0;
+        el.style.transitionDelay = Math.min(siblingIndex, 6) * 70 + 'ms';
+        groups.set(parent, siblingIndex + 1);
+        el.classList.add('in-view');
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>

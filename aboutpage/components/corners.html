@@ -1,0 +1,122 @@
+<style>
+#corners { padding: 56px 0; background: #FFF1F5; }
+#corners .container { max-width: 1320px; margin: 0 auto; padding: 0 18px; box-sizing: border-box; }
+#corners .section-head { max-width: 640px; margin: 0 auto 32px; text-align: center; }
+#corners .eyebrow { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: #09ADE9; background: #DDF3F5; padding: 6px 16px; border-radius: 999px; margin-bottom: 14px; }
+#corners .section-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.25; color: #1B2A4E; margin: 0; }
+#corners .section-title .pink { color: #FF4D94; }
+#corners .section-sub { margin-top: 12px; font-size: 14.5px; line-height: 1.6; color: #6B7280; font-family: 'Poppins', sans-serif; }
+#corners .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16, 0.84, 0.44, 1), transform 0.7s cubic-bezier(0.16, 0.84, 0.44, 1); }
+#corners .reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { #corners .reveal { opacity: 1; transform: none; transition: none; } }
+
+#corners .corners-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+#corners .corner-tile {
+  position: relative; aspect-ratio: 3 / 4; border-radius: 22px; overflow: hidden; background: #F3F5F9;
+  box-shadow: 0 14px 30px rgba(27, 42, 78, 0.1); transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+#corners .corner-tile:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(27, 42, 78, 0.2); }
+#corners .corner-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+#corners .corner-tile:hover .corner-photo { transform: scale(1.08); }
+#corners .corner-info {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 14px 14px;
+  background: linear-gradient(0deg, rgba(15, 22, 43, 0.92) 10%, rgba(15, 22, 43, 0.55) 60%, transparent 100%);
+  color: #fff; transform: translateY(38%); transition: transform 0.35s ease;
+}
+#corners .corner-tile:hover .corner-info,
+#corners .corner-tile:focus-within .corner-info { transform: translateY(0); }
+#corners .corner-info h4 { font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 14px; margin: 0 0 6px; }
+#corners .corner-info p { font-size: 11.5px; line-height: 1.5; color: rgba(255, 255, 255, 0.85); margin: 0; opacity: 0; max-height: 0; transition: opacity 0.3s ease 0.05s; }
+#corners .corner-tile:hover .corner-info p,
+#corners .corner-tile:focus-within .corner-info p { opacity: 1; max-height: 100px; }
+
+@media (min-width: 640px) { #corners .corners-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { #corners .section-title { font-size: 32px; } #corners .section-sub { font-size: 15.5px; } }
+@media (min-width: 960px) {
+  #corners { padding: 96px 0; }
+  #corners .container { padding: 0 40px; }
+  #corners .section-head { margin-bottom: 44px; }
+  #corners .section-title { font-size: 38px; }
+  #corners .corners-grid { grid-template-columns: repeat(4, 1fr); }
+}
+</style>
+
+<section class="section corners" id="corners">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Wander Around</span>
+      <h2 class="section-title">Explore <span class="pink">Every Corner</span></h2>
+      <p class="section-sub">Hover a zone to see what's waiting for you inside.</p>
+    </div>
+
+    <div class="corners-grid">
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Cycles-store-in-vijayawada.webp" alt="Bicycle Zone" loading="lazy">
+        <div class="corner-info"><h4>Bicycle Zone</h4><p>Rows of geared, electric, and kids' cycles ready to test-ride.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Baby-Essentials-store.webp" alt="Baby Essentials" loading="lazy">
+        <div class="corner-info"><h4>Baby Essentials</h4><p>Everything for the first 1000 days, in one gentle corner.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Car-bike-scooty-store.webp" alt="Ride-On Arena" loading="lazy">
+        <div class="corner-info"><h4>Ride-On Arena</h4><p>Battery cars and bikes your kids will beg to try.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Toys-in-Rolls-and-Rattles.webp" alt="Toy Kingdom" loading="lazy">
+        <div class="corner-info"><h4>Toy Kingdom</h4><p>Aisles of wonder, from soft toys to brain games.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Sports-Store.webp" alt="Sports Corner" loading="lazy">
+        <div class="corner-info"><h4>Sports Corner</h4><p>Gear up for cricket, football, skating, and more.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Stationary-Store.webp" alt="Stationery Hub" loading="lazy">
+        <div class="corner-info"><h4>Stationery Hub</h4><p>School supplies and craft essentials for curious minds.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Kids-clothing-Store.webp" alt="Kids Fashion" loading="lazy">
+        <div class="corner-info"><h4>Kids Fashion</h4><p>Everyday and party wear for every little trendsetter.</p></div>
+      </div>
+
+      <div class="corner-tile reveal" tabindex="0">
+        <img class="corner-photo" src="https://rollsandrattles.in/wp-content/uploads/2026/07/Kids-Footwear-Store.webp" alt="Footwear Collection" loading="lazy">
+        <div class="corner-info"><h4>Footwear Collection</h4><p>Comfortable steps for every age, indoors and out.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var thisScript = document.currentScript;
+  var section = thisScript.previousElementSibling;
+  var revealEls = section.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var groups = new Map();
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var parent = el.parentElement;
+        var siblingIndex = groups.get(parent) || 0;
+        el.style.transitionDelay = Math.min(siblingIndex, 6) * 70 + 'ms';
+        groups.set(parent, siblingIndex + 1);
+        el.classList.add('in-view');
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>
